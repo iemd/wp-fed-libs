@@ -1,0 +1,92 @@
+:root {
+    --primary: #007BA7;
+    --secondary: #00A8E8;
+    --text: #0076A2;
+    --accent: #BAECFF;
+    --bg: #FFFFFF;
+    --defaultColor: #FFB400;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+h1 {
+    color: var(--text);
+}
+
+p {
+    color: var(--text);
+}
+
+span {
+    color: var(--accent);
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    width: 248px;
+}
+
+button.square {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+    background-color: var(--bg);
+    border: 4px solid var(--accent);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button#reset {
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    margin: 24px 0 48px;
+    padding: 8px 32px;
+    font-size: 1rem;
+    background-color: var(--primary);
+    color: var(--bg);
+}
+
+button#reset:hover {
+    cursor: pointer;
+}
+
+button#reset:active {
+    background-color: var(--secondary);
+    transform: translateY(1px);
+    cursor: pointer;
+}
+
+.status {
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+@media (min-width: 425px) {
+    .container {
+        width: 248px;
+    }
+}
